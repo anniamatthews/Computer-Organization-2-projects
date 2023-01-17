@@ -3,3 +3,7 @@
 // 10^10 additions of integer constants 
 // 5*10^9 multiplications of integer constants
 // 2*10^9 divisions of integer constants 
+#include <iostream>
+#include <stdio.h>
+using namespace std; 
+
