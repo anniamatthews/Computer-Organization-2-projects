@@ -8,8 +8,7 @@
 using namespace std; 
 
 int main(){
-    long int a = 10; // just a starting point for both variables a and b 
-    long int b = 15; 
+    
 
     return 0; 
 }
