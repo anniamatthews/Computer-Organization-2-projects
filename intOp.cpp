@@ -8,11 +8,14 @@
 using namespace std; 
 
 int main(){
+    long int a = 10; // just a starting point for both variables a and b 
+    long int b = 15; 
 
     return 0; 
 }
 
-void add(long int a, long int b){} 
+void add(long int a, long int b){
+} 
 // need to verify how exactly I am storing variables, 
 // but this is a start for all functions in this program until I can clarify this 
 
