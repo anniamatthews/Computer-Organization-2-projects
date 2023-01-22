@@ -14,14 +14,6 @@ int main(){
     return 0; 
 }
 
-void add(long int a, long int b){
-    // plan is to perform the necessary operations and then print how long it took to do each 
+void ops(long int a, long int b){
     
-} 
-// need to verify how exactly I am storing variables, 
-// but this is a start for all functions in this program until I can clarify this 
-
-void multiply(long int a, long int b){}
-
-void divide(long int a, long int b){}
-
+}
