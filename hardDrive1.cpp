@@ -8,7 +8,8 @@ int main(){
     int readTemp;
     t1 = clock();
     // generate binary file "file.bin"
-    ofstream file("file.bin",ios::binary | ios::out);
+    fstream file("file.bin",ios::binary | ios::out); 
+    //fstream to accomodate both reading and writing to the file 
 
     // define buffer of 100 bytes
     char buffer[100];
