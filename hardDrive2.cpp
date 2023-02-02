@@ -9,6 +9,10 @@ this program looks very similar to hardDrive1 because we are doing the same thin
 
 int main(){
 
+    clock_t t1, t2; 
+    int readTemp;
+    t1 = clock();
+
     // generate binary file "file2.bin"
     fstream file("file2.bin",ios::binary | ios::out); 
 
@@ -33,7 +37,11 @@ int main(){
         file.read(buffer,10000); // read from file, 10000 bytes at a time
 
     }
-
+    
+    t2 = clock();
+    float diff((float)t2-(float)t1);
+    float seconds = diff / CLOCKS_PER_SEC;
+    cout << "Time taken:" << seconds << "s" << endl; 
 
     return 0; 
 }
