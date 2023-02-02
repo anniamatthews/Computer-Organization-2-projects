@@ -1,14 +1,15 @@
 #include <iostream>
 #include <stdio.h>
 #include <time.h>
+#include <vector>
 using namespace std; 
 
 int main(){
     clock_t t1, t2; 
-    int readTemp; 
-    int* arr = new int[5e9];
+    int readTemp;
+    vector<int> arr(5000000000); // change this back to an array 
     t1 = clock();
-    for(long long int i = 0; i < 5e9; i++){
+    for(long long int i = 0; i < arr.size(); i++){
         readTemp = arr[i];
     }
     t2 = clock();
