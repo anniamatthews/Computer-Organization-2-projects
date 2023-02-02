@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include <time.h>
 using namespace std; 
 
 int main(){
-    
+    clock_t t1, t2; 
+    int readTemp;
+    t1 = clock();
     // generate binary file "file.bin"
     ofstream file("file.bin",ios::binary | ios::out);
 
@@ -31,6 +34,11 @@ int main(){
         file.seekg(i*100); // update position indicator
         file.read(buffer,100); // read from file, 100 bytes at a time
      }
+
+        t2 = clock();
+        float diff((float)t2-(float)t1);
+        float seconds = diff / CLOCKS_PER_SEC;
+        cout << "Time taken:" << seconds << "s" << endl; 
      
 
     return 0; 
