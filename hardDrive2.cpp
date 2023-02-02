@@ -23,8 +23,9 @@ int main(){
         for(int j = 0; j < 10000;j++){
             buffer[j] = i % 26 + 'a'; // random information 
         }
-        
 
+        file.seekp(i*10000); // update position indicator 
+        file.write(buffer,10000); // write contents of bufer to file
     }
 
 
