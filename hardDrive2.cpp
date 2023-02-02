@@ -4,14 +4,13 @@
 using namespace std; 
 
 /*
-this program is very similar to that of hardDrive1.cpp 
-because we are changing the amount of bytes we are working with at a time to be 10000 instead of 100
+this program looks very similar to hardDrive1 because we are doing the same thing, except with more bytes at a time 
 */
 
 int main(){
 
-    // generate binary file "file.bin"
-    fstream file("file.bin",ios::binary | ios::out); 
+    // generate binary file "file2.bin"
+    fstream file("file2.bin",ios::binary | ios::out); 
 
     // define buffer of 10000 bytes
     char buffer[10000];
@@ -26,6 +25,13 @@ int main(){
 
         file.seekp(i*10000); // update position indicator 
         file.write(buffer,10000); // write contents of bufer to file
+    }
+
+    // read loop 
+    for(int i = 0; i < 1000000000/10000;i++){
+        file.seekg(i*10000); // update position indicator
+        file.read(buffer,10000); // read from file, 10000 bytes at a time
+
     }
 
 
