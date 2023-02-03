@@ -10,12 +10,13 @@ using namespace std;
 
 
 int main(){
-    // create two variables to add 
-    long int a = 0; 
-    long int b = 1; 
+    // create two variables to perform operations on 
+    int left = 0; // left hand operand 
+    int right = 1; // right hand operand
+    const int N = 10000000000 
 
-    // start measuring the time 
-    clock_t tStart = clock();
+
+    
     for(long int i = 0; i < 1e10; i++){ // additions
         a+=b;
         
@@ -26,7 +27,7 @@ int main(){
     for(long int i = 0; i < 2e9; i++){ // divisions 
         a/=b;
     }
-    printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    
 
     return 0; 
 }
