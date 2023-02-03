@@ -3,6 +3,12 @@
 using namespace std; 
 
 int main(){
+
+    // start timer: 
+    clock_t t1, t2; 
+    int readTemp;
+    t1 = clock();
+
     // define array of type char with size 5e9
     constexpr int N = 5000000000;
     char *array = new char[N]; // dynamically allocate memory for the array to handle large size 
@@ -27,5 +33,16 @@ int main(){
 
     // deallocate array of memory
     delete[] array; 
+
+    // end clock 
+    t2 = clock();
+
+    // calculate time
+    float diff((float)t2-(float)t1);
+    float seconds = diff / CLOCKS_PER_SEC;
+
+    // print time taken 
+    cout << "Time taken:" << seconds << "s" << endl; 
+
     return 0; 
 }
