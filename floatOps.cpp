@@ -4,21 +4,29 @@
 using namespace std; 
 
 int main(){
-    // this program is a modified version of the integer operations benchmark 
+    // this program is a slightly modified version of the integer operations benchmark 
 
     // create two variables to perform operations on 
     double left = 0; // left hand operand 
     double right = 1; // right hand operand
 
-    
-    
-    for(long int i = 0; i < 1e10;i++){ //additions
+    // set number of iterations for loops...same amount as the integer operations
+    long int N = 10000000000; // number of additions
+    long int M = 5000000000; // number of multiplications
+    long int K = 2000000000; // number of divisions
+
+    // additions 
+    for(long int i = 0; i < N; i++){ 
         left+=right;   // adding b into a 
     }
-    for(long int i = 0; i < 5e9;i++){ // multiplications
+
+    // multiplications 
+    for(long int i = 0; i < M; i++){ 
         left*=right;
     }
-    for(long int i = 0; i < 2e9;i++){ //divisions 
+
+    // divisions
+    for(long int i = 0; i < K;i++){  
         left/=right;
     }
     
