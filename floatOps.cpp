@@ -4,20 +4,24 @@
 using namespace std; 
 
 int main(){
-    double a = 0; 
-    double b = 1; 
-    clock_t tStart = clock(); // start the clock 
+    // this program is a modified version of the integer operations benchmark 
+
+    // create two variables to perform operations on 
+    double left = 0; // left hand operand 
+    double right = 1; // right hand operand
+
+    
+    
     for(long int i = 0; i < 1e10;i++){ //additions
-        a+=b;   // adding b into a 
+        left+=right;   // adding b into a 
     }
     for(long int i = 0; i < 5e9;i++){ // multiplications
-        a*=b;
+        left*=right;
     }
     for(long int i = 0; i < 2e9;i++){ //divisions 
-        a/=b;
+        left/=right;
     }
-    // stop recording time and print execution time 
-    printf("Time taken: %.2fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    
 
 
     return 0; 
