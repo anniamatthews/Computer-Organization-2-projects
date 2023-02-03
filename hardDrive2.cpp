@@ -9,6 +9,7 @@ this program looks very similar to hardDrive1 because we are doing the same thin
 
 int main(){
 
+    // start clock 
     clock_t t1, t2; 
     int readTemp;
     t1 = clock();
@@ -27,21 +28,34 @@ int main(){
             buffer[j] = i % 26 + 'a'; // random information 
         }
 
-        file.seekp(i*10000); // update position indicator 
-        file.write(buffer,10000); // write contents of bufer to file
+        // update position indicator 
+        file.seekp(i*10000); 
+
+        // write contents of buffer to file 
+        file.write(buffer,10000); 
+
     }
 
     // read loop 
     for(int i = 0; i < 1000000000/10000;i++){
-        file.seekg(i*10000); // update position indicator
-        file.read(buffer,10000); // read from file, 10000 bytes at a time
+        
+        // update position indicator
+        file.seekg(i*10000); 
+
+        // read from file 10000 bytes at a time 
+        file.read(buffer,10000); 
 
     }
     
+    // end clock 
     t2 = clock();
+
+    // calculate time
     float diff((float)t2-(float)t1);
     float seconds = diff / CLOCKS_PER_SEC;
-    cout << "Time taken:" << seconds << "s" << endl; 
+
+    // print time taken 
+    cout << "Time taken:" << seconds << "s" << endl;
 
     return 0; 
 }
