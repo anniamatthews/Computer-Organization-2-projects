@@ -13,18 +13,18 @@ int main(){
     // create two variables to perform operations on 
     int left = 0; // left hand operand 
     int right = 1; // right hand operand
-    const int N = 10000000000 
-
-
+    const int N = 10000000000; // number of additions
+    const int M = 5000000000; // number of multiplications
+    const in K = 2000000000; // number of divisions
     
-    for(long int i = 0; i < 1e10; i++){ // additions
+    for(long int i = 0; i < N; i++){ // additions
         a+=b;
         
     }
-    for(long int i = 0; i < 5e9;i++){ // multiplications
+    for(long int i = 0; i < M;i++){ // multiplications
         a*=b; 
     }
-    for(long int i = 0; i < 2e9; i++){ // divisions 
+    for(long int i = 0; i < K; i++){ // divisions 
         a/=b;
     }
     
