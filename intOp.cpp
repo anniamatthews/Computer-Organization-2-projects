@@ -16,27 +16,27 @@ int main(){
     t1 = clock();
     
     // create two variables to perform operations on 
-    int left = 0; // left hand operand 
-    int right = 1; // right hand operand
+    long int left = 0; 
+    long int right = 1; 
     
     // set # of iterations for loops 
-    const int N = 10000000000; // number of additions
-    const int M = 5000000000; // number of multiplications
-    const in K = 2000000000; // number of divisions
+    long int N = 10000000000; // number of additions
+    long int M = 5000000000; // number of multiplications
+    long int K = 2000000000; // number of divisions
     
     // additions
     for(long int i = 0; i < N; i++){ 
-        a+=b;  
+        left+=right;  
     }
 
     // multiplications
     for(long int i = 0; i < M;i++){ 
-        a*=b; 
+        left*=right; 
     }
 
     // divisions
     for(long int i = 0; i < K; i++){ 
-        a/=b;
+        left/=right;
     }
 
     // end clock 
