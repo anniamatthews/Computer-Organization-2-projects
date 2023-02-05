@@ -5,16 +5,16 @@ using namespace std;
 
 int main(){
     
-    // start clock 
-    clock_t t1, t2; 
-    int readTemp;
-    t1 = clock();
-    
     // generate binary file "file.bin"
     fstream file("file.bin",ios::binary | ios::out); //fstream to accomodate both reading and writing to the file 
 
     // define buffer of 100 bytes
     char buffer[100];
+
+    // start clock 
+    clock_t t1, t2; 
+    int readTemp;
+    t1 = clock();
 
     // write loop 
     for(int i = 0; i < 1000000000/100;i++){  
