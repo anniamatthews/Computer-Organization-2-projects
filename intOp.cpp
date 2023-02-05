@@ -10,10 +10,6 @@ using namespace std;
 
 
 int main(){
-    // start timer: 
-    clock_t t1, t2; 
-    int readTemp;
-    t1 = clock();
     
     // create two variables to perform operations on 
     long int left = 0; 
@@ -23,6 +19,12 @@ int main(){
     long int N = 10000000000; // number of additions
     long int M = 5000000000; // number of multiplications
     long int K = 2000000000; // number of divisions
+    
+    // start clock 
+    clock_t t1, t2; 
+    int readTemp;
+    t1 = clock();
+    
     
     // additions
     for(long int i = 0; i < N; i++){ 
