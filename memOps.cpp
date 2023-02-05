@@ -4,6 +4,8 @@
 using namespace std; 
 
 int main(){
+    long int N = 50000; 
+    int arr[N];
 
     // start timer: 
     clock_t t1, t2; 
@@ -11,6 +13,14 @@ int main(){
     t1 = clock();
 
     // loop over a 5*10^4 sized array 10^5 times
+    for(int i = 0; i < 100000; i++){ 
+        
+        for(int j = 0; j < N; j+= 4){
+            arr[j] = i; 
+            int tmp = arr[j]; // read from the array
+        }
+    }
+   
 
     // end clock 
     t2 = clock();
